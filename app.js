@@ -13,8 +13,8 @@ app.use(cors());
 
 const mongoUrl=process.env.MONGO_URL
 
-
-mongoose.connect(mongoUrl, err => {
+mongoose.set('strictQuery', false);
+mongoose.connect(mongoUrl,{ useNewUrlParser: true }, err => {
   if (err) throw err;
   console.log("Mongodb connected...");
 });
