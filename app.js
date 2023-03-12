@@ -14,7 +14,9 @@ app.use(cors());
 const mongoUrl=process.env.MONGO_URL
 
 
-mongoose.connect(mongoUrl, err => {
+mongoose.connect(mongoUrl,{ useUnifiedTopology:true,
+            useNewUrlParser: true,
+            useCreateIndex: true}, err => {
   if (err) throw err;
   console.log("Mongodb connected...");
 });
