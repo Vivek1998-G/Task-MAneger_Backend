@@ -7,6 +7,8 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
+Const fs = require(‘fs’);
+fs.readFileSync(‘${__dirname}\index.html’);
 
 app.use(express.json());
 app.use(cors());
