@@ -14,7 +14,7 @@ app.use(cors());
 const mongoUrl=process.env.MONGO_URL
 
 mongoose.set('strictQuery', false);
-mongoose.connect(mongoUrl,{ useNewUrlParser: true }, err => {
+mongoose.connect("mongodb+srv://Vaccination:Vivek1234@cluster0.pwozf2l.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true }, err => {
   if (err) throw err;
   console.log("Mongodb connected...");
 });
