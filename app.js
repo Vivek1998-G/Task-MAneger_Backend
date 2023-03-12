@@ -7,8 +7,6 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
-Const fs = require(‘fs’);
-fs.readFileSync(‘${__dirname}\index.html’);
 
 app.use(express.json());
 app.use(cors());
@@ -16,7 +14,7 @@ app.use(cors());
 const mongoUrl=process.env.MONGO_URL
 
 
-mongoose.connect("mongodb+srv://Vaccination:Vivek1234@cluster0.pwozf2l.mongodb.net/?retryWrites=true&w=majority", err => {
+mongoose.connect(mongoUrl, err => {
   if (err) throw err;
   console.log("Mongodb connected...");
 });
@@ -35,7 +33,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 
-const port =  5000;
+const port =  rocess.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Backend is running on port ${port}`);
 });
