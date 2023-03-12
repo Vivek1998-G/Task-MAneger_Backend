@@ -14,7 +14,7 @@ app.use(cors());
 const mongoUrl=process.env.MONGO_URL
 
 
-mongoose.connect(mongoUrl,{ useUnifiedTopology:true,
+mongoose.connect("mongodb+srv://Vaccination:Vivek1234@cluster0.pwozf2l.mongodb.net/?retryWrites=true&w=majority",{ useUnifiedTopology:true,
             useNewUrlParser: true,
             useCreateIndex: true}, err => {
   if (err) throw err;
