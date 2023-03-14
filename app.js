@@ -25,7 +25,7 @@ app.use("/api/tasks", taskRoutes);
 app.use("/api/profile", profileRoutes);
 
 app.get('/vivek',(req,res)=>{
-  res.send("hello vivek")
+  res.send("hello vivek tested")
 })
 
 
