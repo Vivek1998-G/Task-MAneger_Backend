@@ -14,7 +14,7 @@ app.use(cors());
 const mongoUrl=process.env.MONGO_URL
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb+srv://task_manager:Task@1234@cluster0.aum99mm.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true }, err => {
+mongoose.connect("mongodb+srv://task_manager:Task%401234@cluster0.aum99mm.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true }, err => {
   if (err) throw err;
   console.log("Mongodb connected...");
 });
